@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>LANDING LIGHT</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <a href="#">TRIPS</a>
+      <a href="#">RECENTLY VIEWED</a>
+      <a href="#">BOOKINGS</a>
+      <a href="#">
+        <img src="./images/headshot1.jpg" alt="user image" />
+      </a>
+    </nav>
+    <hr />
+    <!-- Card details -->
+    <section class="card">
+      <!-- left card -->
+      <div class="card-left">
+        <h2 class="card-left__header">Payment Information</h2>
+        <p class="card-left__para">Choose your method of payment.</p>
+        <img
+          class="card-left__card"
+          src="./images//card.JPG"
+          alt="debit card"
+        />
+      </div>
+
+      <!-- right card -->
+      <div class="card-right">
+        <div class="card-right__icons">
+          <div>
+            <img src="./images/visa.JPG" alt="" />
+            <img src="./images/discover.JPG" alt="" />
+          </div>
+          <div>
+            <img src="./images/circle.JPG" alt="" />
+            <img src="./images/paypal.JPG" alt="" />
+          </div>
+        </div>
+
+        <div class="card-right__form">
+          <div class="card-right__form-inputs">
+            <label for="card-number"
+              >Credit card number
+              <input
+                type="number"
+                name="card-number"
+                class="card-input"
+                placeholder="4324 5433 9382 1030"
+              />
+            </label>
+
+            <label for="card-date"
+              >Expiration date
+              <input
+                type="date"
+                name="card-date"
+                class="card-input"
+                placeholder="03/24"
+              />
+            </label>
+
+            <label for="card-security-code"
+              >Security code
+              <input
+                type="number"
+                name="card-security-code"
+                class="card-input"
+                placeholder="420"
+              />
+            </label>
+
+            <label for="card-postal-code"
+              >Postal Code
+              <input
+                type="number"
+                name="card-postal-code"
+                class="card-input"
+                placeholder="10119"
+              />
+            </label>
+          </div>
+
+          <label class="card-purchase"
+            >Use this card for next time purchase
+            <input type="radio" name="radio" />
+            <span class="checkmark"></span>
+          </label>
+          <button type="submit">Add card</button>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <!-- Subtotal -->
+    <section class="subtotal">
+      <div class="subtotal-item">
+        <p>Subtotal</p>
+        <p>&#8358;2,407.00</p>
+      </div>
+
+      <div class="subtotal-item">
+        <p>Estimated TAX</p>
+        <p>&#8358;119.64</p>
+      </div>
+
+      <div class="subtotal-item">
+        <p>Promotional Code: <span>Z4KXLM9A</span></p>
+        <p>&#8358;-60.00</p>
+      </div>
+    </section>
+    <hr />
+    <!-- Card Payment -->
+    <section class="total">
+      <button type="submit">Complete payment</button>
+      <p>TOTAL:&#8358;2556.64.00</p>
+    </section>
+  </body>
+</html>

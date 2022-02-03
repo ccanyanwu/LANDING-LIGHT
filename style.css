@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 3rem;
+}
+.container {
+  max-width: 1200px;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+nav,
+.card-right__icons,
+.subtotal-item,
+.total {
+  display: flex;
+}
+nav {
+  justify-content: space-around;
+  margin-bottom: 7rem;
+  margin-left: auto;
+  width: 50%;
+}
+nav > a {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+nav > a:hover {
+  color: #333;
+}
+nav :not(:last-child) {
+  align-self: center;
+  margin-top: 1rem;
+}
+
+hr {
+  border: 0.5px solid #e4e4e4;
+  display: block;
+  margin: 0 auto 3rem;
+  width: 85%;
+}
+
+/* Card */
+.card {
+  display: grid;
+  grid: 1fr / 1fr 1fr;
+  margin-bottom: 1.5rem;
+  padding: 0 4rem;
+}
+.card-left__header {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.card-left__para {
+  color: #b5b5b5;
+  font-size: 1rem;
+  font-weight: lighter;
+  margin-bottom: 1.3rem;
+}
+.card-left__card {
+  border-radius: 0.35rem;
+  height: 18rem;
+  width: 75%;
+}
+.card-right__icons,
+.subtotal-item,
+.total {
+  justify-content: space-between;
+}
+.card-right__icons {
+  margin-left: auto;
+  width: 50%;
+}
+.card-right__icons :first-child > img {
+  width: 2rem;
+}
+.card-right__icons :first-child :first-child {
+  margin-right: 1.5rem;
+}
+.card-right__icons :last-child :first-child {
+  width: 1rem;
+}
+.card-right__icons :last-child :last-child {
+  margin-left: 1rem;
+  width: 5rem;
+}
+.card-right__form-inputs {
+  display: grid;
+  gap: 2rem;
+  grid: 1fr 1fr / 1fr 1fr;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+.card-input {
+  border: 1px solid #b5b5b5;
+  border-radius: 0.2rem;
+  background-color: #f4f4f4;
+  display: block;
+  height: 3rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1.25rem;
+  width: 100%;
+}
+.card-input:focus {
+  outline: #b5b5b5;
+}
+.card-input::placeholder {
+  color: #000;
+}
+.card-purchase {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: .85rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.card-purchase input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1rem;
+  width: 1rem;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.card-purchase:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.card-purchase input:checked ~ .checkmark {
+  background-color: #3c64eb;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.card-purchase input:checked ~ .checkmark:after {
+  display: block;
+}
+.card-purchase .checkmark:after {
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+.card button[type="submit"],
+.total > button {
+  border: 0;
+  border-radius: 0.25rem;
+  color: #fff;
+  font-weight: bolder;
+  height: 3.5rem;
+  margin-top: 0.5rem;
+}
+.card button[type="submit"] {
+  background-color: #4c64b2;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* Subtotal */
+.subtotal {
+  margin: 3rem 0 4rem;
+  padding: 0 4rem;
+}
+.subtotal-item {
+  margin-bottom: 1.5rem;
+  font-size: large;
+  font-weight: 700;
+  padding-right: 1.5rem;
+}
+.subtotal-item > p > span {
+  color: #b5b5b5;
+}
+
+/* Total */
+.total {
+  margin: 3rem 0 7rem;
+  padding: 0 4rem;
+}
+.total > button {
+  background-color: #3c64eb;
+  font-size: 1.2rem;
+  width: 25%;
+}
+.total > p {
+  align-self: center;
+  font-weight: 900;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
